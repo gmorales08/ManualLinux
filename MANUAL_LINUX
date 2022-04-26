@@ -91,7 +91,7 @@ Esta es una guia de referencia para uso personal. Voy a anotar todas las dudas, 
                 5.2.1.2. Crear un repositorio
                 5.2.1.3. Comandos comunes
                 5.2.1.4. Gitignore
-                5.2.1.5. Crear un nuevo repositorio en una subcarpeta
+                5.2.1.5. Submodulos
          5.2.2. Java
          
     5.3. Bases de datos
@@ -683,7 +683,9 @@ Para hacerse una idea de que documentos debemos agregar dependiendo del tipo de 
 Es importante agregar el .gitignore a git (git add .gitignore) para que otras personas sepan que archivos estan ocultos                                 
 
 
-               --Crear un nuevo repositorio en una subcarpeta--
+                                --Submodulos--
+                                
+                             Crear un submodulo:
               
 Si queremos crear un repositorio nuevo dentro de un repositorio ya creado, tenemos que crear lo que se conoce como submódulo.
 
@@ -692,6 +694,10 @@ Para hacerlo, nos ubicamos dentro del repositorio principal en la terminal y esc
     git submodule add codigo_repositorio    # codigo_repositorio es el codigo ssh del repositorio.
     
 Ya tenemos el directorio del submodulo agregada, y podemos trabajar con el submodulo.
+Git crea un archivo .gitmodules donde esta la información de los submódulos del repositorio.
+
+
+                     Clonar un repositorio con submodulos
 
 Si queremos clonar un repositorio que contenga submodulos, escribimos en terminal:
     
@@ -699,7 +705,20 @@ Si queremos clonar un repositorio que contenga submodulos, escribimos en termina
     git submodule init              # Detecta todos los submodulos
     git submodule update            # Sincroniza los submodulos
     
-                               
+O tambien podemos escribir:
+
+    git clone --recurse-submodules  # que equivale a los tres comandos anteriores
+    
+    
+                   Actualizar un repositorio con submodulos    
+                  
+Para actualizar todos los submodulos de un proyecto, escribimos en terminal:
+
+    git submodule update --remote --recursive          
+    
+Para hacer un pull de un proyecto que contenga submodulos, escribimos:
+
+    git pull --recurse-submodules    # Esto nos hace un pull del repositorio y actualiza todos sus submodulos
                                
                              ~~~ 5.2.2. Java ~~~
                              
