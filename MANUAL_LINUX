@@ -771,7 +771,7 @@ Fzf es una utilidad que permite buscar archivos en todos los directorios del sis
 
 Primero tenemos que escribir fzf en la terminal, y luego escribimos el archivo que queremos buscar.
 
-Fzf busca en todas las ubicaciones inferiores a donde lanzamos el comando. Para buscar en todo el sistema tenemos que lanzarlo desde /.                              
+Fzf busca en todas las ubicaciones inferiores a donde lanzamos el comando. Para buscar en todo el sistema tenemos que lanzarlo desde /.
 
 
 
