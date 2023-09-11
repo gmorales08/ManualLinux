@@ -744,6 +744,8 @@ El ordenador del servidor tambien puede ser un cliente.
 
 En la terminal escribimos: sudo apt install mariadb-server mariadb-client
 
+Si queremos realizar la configuracion inicial guiada ejecutamos el comando: mysql_secure_installation
+
 Existe un archivo de configuración ubicado en /etc/mysql/my.cnf, donde podemos cambiar, entre otros parametros, el puerto del servidor.
 
 Para poder trabajar con la bbdd necesitamos un usuario:
